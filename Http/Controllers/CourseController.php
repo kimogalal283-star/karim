@@ -1,0 +1,12 @@
+namespace App\Http\Controllers;
+
+use App\Models\Course;
+
+class CourseController extends Controller
+{
+    public function index()
+    {
+        $courses = Course::all(); // يجيب كل الكورسات من قاعدة البيانات
+        return view('courses.index', compact('courses')); // يبعته للواجهة
+    }
+}
